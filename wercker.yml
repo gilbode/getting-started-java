@@ -28,4 +28,6 @@ build:
     - script:
         name: gradle build
         code: |
+          echo "password = $password"
+          echo "password1 = $password1"
           ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
